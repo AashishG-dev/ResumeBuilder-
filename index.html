@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume Builder</title>
+    
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Resume Builder</h1>
+
+        <form id="resume-form">
+            <h2>Personal Information</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <label for="summary">Profile Summary:</label>
+            <textarea id="summary" name="summary" rows="4"></textarea>
+
+            <h2>Education</h2>
+            <div id="education-section">
+                <div class="education-row">
+                    <label for="school">School:</label>
+                    <input type="text" name="school" class="school">
+                    <label for="degree">Degree:</label>
+                    <input type="text" name="degree" class="degree">
+                </div>
+            </div>
+            <button type="button" id="add-education">Add Education</button>
+
+            <h2>Skills</h2>
+            <div id="skills-section">
+                <label><input type="checkbox" name="skills" value="HTML"> HTML</label>
+                <label><input type="checkbox" name="skills" value="CSS"> CSS</label>
+                <label><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label>
+            </div>
+
+            <h2>Experience</h2>
+            <div id="experience-section">
+                <div class="experience-row">
+                    <label for="company">Company:</label>
+                    <input type="text" name="company" class="company">
+                    <label for="role">Role:</label>
+                    <input type="text" name="role" class="role">
+                </div>
+            </div>
+            <button type="button" id="add-experience">Add Experience</button>
+
+            <button type="button" id="clear-form">Clear Form</button>
+        </form>
+
+        <section id="resume-preview">
+            <h2>Live Resume Preview</h2>
+            <div id="resume-output">
+                <!-- Live preview will be updated here -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

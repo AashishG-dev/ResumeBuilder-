@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: lightgray;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+form, #resume-preview {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+    /* Add background image */
+    background-image: url('your-image-url-here.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid gray;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: green;
+}
+
+#resume-output {
+    padding: 20px;
+    border: 1px solid lightgray;
+    background-color: white;
+}
+
+.education-row, .experience-row {
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkgreen;
+}
+
+#resume-output {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#resume-output.active {
+    opacity: 1;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    input, textarea {
+        font-size: 14px;
+    }
+
+    .container {
+        width: 95%;
+    }
+}
